@@ -62,14 +62,18 @@ $^{2}$ CITIC, Universidad de Granada, Spain }
 
 \begin{abstract}
   \section{}
-Cloud computing is the prevailing mode of designing, creating and
-deploying complex applications nowadays. Its underlying assumptions
-include distributed computing, but also new concepts that need to be
-incorporated in the different fields. In this short paper we will make
+Cloud computing is currently the prevailing mode of designing, creating and
+deploying complex applications, and it has implied a paradigm shift in
+all three areas; even if it taps and extends previous concepts such as
+service oriented, concurrent and distributed computing, this shift has
+to be eventually translated to the algorithmic and conceptual aspects
+of sciences such as artificial life. In this short review we will make
 a review of how the world of cloud computing has intersected the
-complex systems and artificial life field, and how it has been used as
+artificial life field, and how it has been used as
 inspiration for new models or implementation of new and powerful
-algorithms. 
+algorithms; in the other direction, we will also examine how
+artificial life concepts such as self-organization have been applied
+to the field of cloud computing.  
 
 \tiny
  \keyFont{ \section{Keywords:} Artificial life, cloud computing,
@@ -78,8 +82,9 @@ algorithms.
 
 \section{Introduction}
 
-[Cloud computing](https://en.wikipedia.org/wiki/Cloud_computing) is
-currently the dominant computing platform. Even if initially it was a
+From its start less than ten years ago, cloud computing
+\citep{armbrust2010view,qian2009cloud} has become in the last two
+years the dominant computing platform. Even if initially it was a
 metaphor applied to virtualized resources of any kind that could be
 accessed in a pay-per-use basis, it has extended itself way beyond its
 initial and simple translation of data center concepts to create
@@ -89,9 +94,19 @@ These new methodologies have several key issues:
 
 \begin{itemize}
 
-\item Infrastructure is fully automatized and described by software; there is no *hard* boundary between software and hardware, which are developed at the same time, with an application accompanied by the description of the resources it needs. 
+\item Infrastructure is fully automatized and described by software;
+  there is no *hard* boundary between software and hardware, which are
+  developed at the same time, with an application accompanied by the
+  description of the resources it needs.  
 
-\item  Applications are a loose collection of resources which interact asynchronously, are independent of each other, and in many cases have their own vendors or product owners. Some resources are ephemeral, appearing when they are needed and vanishing afterwards, some are permanent, but all of them behave reactively, acting when they receive information, and asynchronously, never waiting for response to return but relying instead on promises or other programming language constructs.
+\item  Applications are a loose collection of resources which interact
+  asynchronously, are independent of each other, and in many cases
+  have their own vendors or product owners. Some resources are
+  ephemeral, appearing when they are needed and vanishing afterwards,
+  some are permanent, but all of them behave reactively, acting when
+  they receive information, and asynchronously, never waiting for
+  response to return but relying instead on promises or other
+  programming language constructs. 
 
 \item  As such a collection, cloud-native applications become *organic*
   with parts of it changing without making the application as a whole
@@ -104,10 +119,10 @@ These new methodologies have several key issues:
 All these characteristics make the cloud an environment that is closer
 to artificial life than single or multidesktop applications. However,
 cloud computing is relatively new and, being as it is a techno-social
-system [@vespignani2009predicting,@JJ2016] it will probably constitute
+system \citep{vespignani2009predicting,JJ2016} it will probably constitute
 the object of study form the point of view of complex systems,
 although for the time being that has not been the case, to the point
-that the recent ECAL 2017 conference [@ecal2017] only has a passing reference to
+that the recent ECAL 2017 conference \citep{ecal17} only has a passing reference to
 cloud systems. That is the reason why we have decided to create this
 mini-review of how cloud computing has been applied in the
 alife/complex systems field, with an emphasis on those papers written
@@ -118,27 +133,85 @@ will do so in the next section.
 
 \section{First steps towards cloud as complex systems}
 
-One of the most straightforward ways of connecting *old* algorithms to *new* technologies is simply to run those algorithms using a straightforward translation of the old technologies. Cloud computing, for instance, offers the possibility of instantiating computing nodes at a cost that is a fraction of buying them; thus it is just straightforward to port an on premises parallel implementation of whatever algorithm to a cloud-based one. That kind of transportation hardly deserves a paper, although it does present some challenges and has in fact been addressed in several ones; for instance [@Medel2017] studies how to create models of complex systems using cloud resources and [@merelo2011evostar] presents a system that uses free cloud storage services as a device for interchanging individuals in an evolutionary algorithm. Several other artificial life systems that use the cloud for storage are presented in a recent review [@taylor2016webal]; however, there are other ways of doing this kind of translation. One of the possibilities that cloud computing offers is the virtualization of computing resources and offering them *as a service*. For instance, offering robot evolution as a service [@du2017robot,@chen2010robot] so that anyone can work with without the need to set up their own infrastructure. Of course, these new implementations have their own scaling and scheduling issues which can be a challenge, but they are mostly a straightforward implementation of *x*-as-a-framework-or-implementation to *x*-as-a-service. Besides, as shown in the paper mentioned above, virtualizing contributes to a reduction of costs, which is one of the first-order results of working in the cloud, but still it is only a short step away from service-oriented architectures. 
+One of the most straightforward ways of connecting {\em old} algorithms to
+*new* technologies is simply to run those algorithms using a
+straightforward translation of the old technologies. Cloud computing,
+for instance, offers the possibility of instantiating computing nodes
+at a cost that is a fraction of buying them; thus it is just
+straightforward to port an on premises parallel implementation of
+whatever algorithm to a cloud-based one. That kind of transportation
+hardly deserves a paper, although it does present some challenges and
+has in fact been addressed in several ones; for instance \citep{Medel2017}
+studies how to create models of complex systems using cloud resources
+and [@merelo2011evostar] presents a system that uses free cloud
+storage services as a device for interchanging individuals in an
+evolutionary algorithm. Several other artificial life systems that use
+the cloud for storage are presented in a recent review \citep{taylor2016webal}; however, there are other ways of doing this kind
+of translation.
+
+One of the possibilities that cloud computing offers
+is the virtualization of computing resources and offering them {\em as a
+service}. For instance, offering robot evolution as a service
+\citep{du2017robot,chen2010robot} so that anyone can work with without the
+need to set up their own infrastructure. Of course, these new
+implementations have their own scaling and scheduling issues which can
+be a challenge, but they are mostly a straightforward implementation
+of $x$-as-a-framework-or-implementation to $x$-as-a-service. Besides,
+as shown in the paper mentioned above, virtualizing contributes to a
+reduction of costs, which is one of the first-order results of working
+in the cloud, but still it is only a short step away from
+service-oriented architectures.  
 
 
 
-This cloud-based setup does have the disadvantage of needing a permanent connection and possibly a high bandwidth. However, there is an interesting complex-systems approach to this: so-called *edge computing* [@satyanarayanan2017edge] moves cloud resources *close* to the service client via technologies that allow them to access other clients using peer to peer technologies, or using mesh networks or similar technologies to establish services that users of mainly mobile devices can access. Since these *edge* nodes kind of *surround* the user, they receive the denomination of *fog* computing too [@luan2015fog], which is studied mainly in the context of the Internet of Things. The devices and computing nodes constituting this *fog* are, effectively, a complex adaptive system [@yan2010application][@roca2018tackling]. However, the scale and sheer number of devices used in fog computing exceed by orders of magnitude the one in actual cloud computing system for the time being, so that for the time being these concepts are still not being applied to them. It is just, however, a matter of time and scale when cloud systems will be considered self-organizing and exhibit emergent behavior. We will refer to this in the next section.
+This cloud-based setup does have the disadvantage of needing a
+permanent connection and possibly a high bandwidth. However, there is
+an interesting complex-systems approach to this: so-called {\em edge
+computing} \citep{satyanarayanan2017edge} moves cloud resources {\em close} to
+the device or user consuming the service via technologies that allow them to access other
+services using peer to peer technologies, or using mesh networks or
+similar technologies to establish services that users of mainly mobile
+devices can access. Since these {\em edge} nodes kind of {\em surround} the
+user, they receive the denomination of {\em fog} computing too
+\citep{luan2015fog}, which is studied mainly in the context of the Internet
+of Things. The devices and computing nodes constituting this {\em fog}
+are, effectively, a complex adaptive system \citep{yan2010application,roca2018tackling}. However, the scale and sheer
+number of devices used in fog computing exceed by orders of magnitude
+the one in actual cloud computing system for the time being, so that
+for the time being these concepts are still not being applied to
+them. It is just, however, a matter of time and scale when cloud
+systems will be considered self-organizing and exhibit emergent
+behavior. We will refer to this in the next section.
+
+
 \section{Complex cloud systems }
 
-Complex cloud systems would make use of the underlying physical (or virtual) characteristics of the cloud to implement complex systems. Most cloud systems architectures are based on queues, which usually form the backbone of the whole system and are used to deliver information as well as activate different modules in a way that scales well. This feature is leveraged in [@bottone2016implementing], which implements an ant-based system using the MQTT queue management framework to deposit virtual pheromones, which are then *sniffed* by agents in an stigmergic algorithm. Instead of simply implementing an array in one of the virtual nodes or a database which can be read from any client, this is a way that translates bioinspired algorithms to their closest equivalent in a virtual environment, creating cloud native complex adaptive systems.
+Complex cloud systems would make use of the underlying physical (or
+virtual) characteristics of the cloud to implement complex
+systems. Most cloud systems architectures are based on queues, which
+usually form the backbone of the whole system and are used to deliver
+information as well as activate different modules in a way that scales
+well. This feature is leveraged \citep{bottone2016implementing}, which
+implements an ant-based system using the MQTT queue management
+framework to deposit virtual pheromones, which are then {\em sniffed} by
+agents in an stigmergic algorithm. Instead of simply implementing an
+array in one of the virtual nodes or a database which can be read from
+any client, this is a way that translates bioinspired algorithms to
+their closest equivalent in a virtual environment, creating cloud
+native complex adaptive systems. 
 
 This can be taken further; every module in a cloud system is not
 adaptive, performing whatever service it has been programmed to do via
 its description. But lately, some cloud systems are being built with
-self-`*` principles in mind; as services in the cloud acquire autonomy
-in what is called *autonomic computing*, *adaptation* is not far away
+self-* principles in mind; as services in the cloud acquire autonomy
+in what is called {\em autonomic computing}, {\em adaptation} is not far away
 and services become adaptive, being able to self-organize and the
 whole system to self-heal, two agencies that make a cloud system
 acquire complex adaptive behaviour, such as being able to reconfigure
 connections, spawn new copies or eliminate them, all in an autonomic
 way without needing to rely on a central authority, using peer to peer
-protocols such as the *gossip* protocol [@LNCS44480129], which has
-actually been used for evolutionary algorithms [@laredo09cache] before
+protocols such as the {\em gossip} protocol \citep{LNCS44480129}, which has
+actually been used for evolutionary algorithms \citep{laredo09cache} before
 cloud computing was even created.
 
 \section{Conclusions}
@@ -163,7 +236,7 @@ This work has been supported in part by the Spanish Ministry of Economía y Comp
 
 \bibliographystyle{frontiersinSCNS_ENG_HUMS} % for Science, Engineering and Humanities and Social Sciences articles, for Humanities and Social Sciences articles please include page numbers in the in-text citations
 %\bibliographystyle{frontiersinHLTH&FPHY} % for Health, Physics and Mathematics articles
-\bibliography{cloud-alife, geneura}
+\bibliography{cloud-alife,geneura}
 
 
 \end{document}

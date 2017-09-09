@@ -89,41 +89,48 @@ metaphor applied to virtualized resources of any kind that could be
 accessed in a pay-per-use basis, it has extended itself way beyond its
 initial and simple translation of data center concepts to create
 completely new software architectures and methodologies for
-developing, testing and deploying large scale applications. 
-These new methodologies have several key issues:
+developing, testing and deploying large scale applications. Several
+concepts account from the difference of cloud computing with respect
+to other, {\em classical}, methodologies. 
+
 
 \begin{itemize}
 
 \item Infrastructure is fully automatized and described by software;
-  there is no *hard* boundary between software and hardware, which are
-  developed at the same time, with an application accompanied by the
-  description of the resources it needs.  
+  there is no {\em hard} boundary between software and hardware, with
+  hardware descriptions and applications that run on them
+  developed at the same time.  
 
-\item  Applications are a loose collection of resources which interact
+\item Applications are a loose collection of resources which interact
   asynchronously, are independent of each other, and in many cases
   have their own vendors or product owners. Some resources are
   ephemeral, appearing when they are needed and vanishing afterwards,
-  some are permanent, but all of them behave reactively, acting when
+  some are permanent, but all of them behave {\em reactively}, being active when
   they receive information, and asynchronously, never waiting for
   response to return but relying instead on promises or other
-  programming language constructs. 
+  programming language constructs to deliver results to caller. 
 
-\item  As such a collection, cloud-native applications become *organic*
-  with parts of it changing without making the application as a whole
-  a different one. There is internal evolution with continuous
-  integration, testing and deployment, as well as evolution in the
-  sense of a progress in fitness, as applications compete with others
-  for mind and market share, as well as resources. 
+\item  As such a loose collection, cloud-native applications might
+  become {\em organic}  with parts of them changing continously, in a
+  process called {\em continuous integration}. This complex internal
+  structure and evolution make them, in fact, complex systems that
+  have to be analyzed and designed with that in mind. 
 \end{itemize}
 
-All these characteristics make the cloud an environment that is closer
-to artificial life than single or multidesktop applications. However,
-cloud computing is relatively new and, being as it is a techno-social
-system \citep{vespignani2009predicting,JJ2016} it will probably constitute
-the object of study form the point of view of complex systems,
-although for the time being that has not been the case, to the point
+On the other hand, artificial life \citep{wiki:alife} includes the
+study of these kind of complex systems looking for similarities among
+them and living systems, ecosystems or societies, in particular, what
+is called {\em soft} artificial life looks at living systems to create
+models and algorithms in engineering applications, from optimization
+to conteng generation. The almost organic and decidedly complex nature
+of large-scale cloud deployments and the fact that they constitute a
+techno-social system \citep{vespignani2009predicting,JJ2016} hints at some relationship between
+both scientific and engineering fields; however,
+for the time being that has not been the case to a large extent, to the point
 that the recent ECAL 2017 conference \citep{ecal17} only has a passing reference to
-cloud systems. That is the reason why we have decided to create this
+cloud systems.
+
+That is the reason why we have decided to create this
 mini-review of how cloud computing has been applied in the
 alife/complex systems field, with an emphasis on those papers written
 in the last few years, when the cloud ecosystem has experimented a big

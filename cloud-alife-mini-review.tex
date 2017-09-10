@@ -141,38 +141,48 @@ will do so in the next section.
 \section{First steps towards cloud as complex systems}
 
 One of the most straightforward ways of connecting {\em old} algorithms to
-*new* technologies is simply to run those algorithms using a
+{\em new} technologies is simply to run those algorithms using a
 straightforward translation of the old technologies. Cloud computing,
-for instance, offers the possibility of instantiating computing nodes
-at a cost that is a fraction of buying them; thus it is just
-straightforward to port an on premises parallel implementation of
-whatever algorithm to a cloud-based one. That kind of transportation
-hardly deserves a paper, although it does present some challenges and
+for instance, offers the possibility of instantiating and using computing nodes
+at a cost that is a fraction of buying them, or even at no cost if you
+land an academic grant or your problem falls within the boundaries of
+the free tier cloud hosts offer. Using these nodes in the same way we
+used computers in a data center or under our desktop, it is 
+straightforward to port a parallel implementation of
+whatever algorithm to a cloud-based one; this presents some challenges and
 has in fact been addressed in several ones; for instance \citep{Medel2017}
-studies how to create models of complex systems using cloud resources
-and \citep{merelo2011evostar} presents a system that uses free cloud
+studies how to create models of complex systems using cloud resources,
+ \citep{merelo2011evostar} presents a system that uses free cloud
 storage services as a device for interchanging individuals in an
-evolutionary algorithm. Several other artificial life systems that use
-the cloud for storage are presented in a recent review \citep{taylor2016webal}; however, there are other ways of doing this kind
-of translation.
+evolutionary algorithm; Kopp \citep{Kopp2016} reviews technologies
+that are, in general, available for simulation, focusing on defense
+applications; however, simulation of adaptive behavior and agent-based
+systems form the basis of artificial life and it could be applied to
+it. Several other artificial life systems that use 
+the cloud for storage are presented in a recent review
+\citep{taylor2016webal}. 
 
-One of the possibilities that cloud computing offers
+
+There are other ways of translating {\em classical} frameworks and
+algorithms, coming mainly from the fact that cloud computing is an
+extension of service computing, that is, offering application
+interfaces for a variety of services over the web. One of the possibilities that cloud computing offers
 is the virtualization of computing resources and offering them {\em as a
 service}. For instance, offering robot evolution as a service
-\citep{du2017robot,chen2010robot} so that anyone can work with without the
-need to set up their own infrastructure. Of course, these new
+\citep{du2017robot,chen2010robot} so that anyone can work with them without the
+need to set up their own infrastructure. These new
 implementations have their own scaling and scheduling issues which can
-be a challenge, but they are mostly a straightforward implementation
+be a challenge, but they are mostly a straightforward shift
 of $x$-as-a-framework-or-implementation to $x$-as-a-service. Besides,
-as shown in the paper mentioned above, virtualizing contributes to a
+as shown in the paper mentioned above, offering artificial life
+frameworks as a service contributes to a
 reduction of costs, which is one of the first-order results of working
 in the cloud, but still it is only a short step away from
 service-oriented architectures.  
 
 
-
-This cloud-based setup does have the disadvantage of needing a
-permanent connection and possibly a high bandwidth. However, there is
+The downside of using the cloud is the need of a permanent connection
+with possibly a high bandwidth. However, there is 
 an interesting complex-systems approach to this: so-called {\em edge
 computing} \citep{satyanarayanan2017edge} moves cloud resources {\em close} to
 the device or user consuming the service via technologies that allow them to access other
@@ -182,7 +192,9 @@ devices can access. Since these {\em edge} nodes kind of {\em surround} the
 user, they receive the denomination of {\em fog} computing too
 \citep{luan2015fog}, which is studied mainly in the context of the Internet
 of Things. The devices and computing nodes constituting this {\em fog}
-are, effectively, a complex adaptive system \citep{yan2010application,roca2018tackling}. However, the scale and sheer
+are, effectively, a complex adaptive system
+\citep{yan2010application,roca2018tackling}. However, the scale and
+sheer 
 number of devices used in fog computing exceed by orders of magnitude
 the one in actual cloud computing system for the time being, so that
 for the time being these concepts are still not being applied to
@@ -193,12 +205,24 @@ behavior. We will refer to this in the next section.
 
 \section{Complex cloud systems }
 
-Complex cloud systems would make use of the underlying physical (or
+The possibilities of cloud architectures to exhibit some form of soft
+artificial life were explored from early on, although mainly in blogs
+and trade conferences \cite{burela09:Azure,hakim}; this last one
+mentions the cloud as a complex adaptive system, with most of the
+features that these systems have such as adaptivity or
+resiliency. However, since the cloud systems are in principle
+human-designed, that adaptivity and resiliency does not necesarily
+exist. Complex adaptive cloud systems  would make use of the underlying physical (or
 virtual) characteristics of the cloud to implement complex
-systems. Most cloud systems architectures are based on queues, which
-usually form the backbone of the whole system and are used to deliver
+systems, although baseline cloud systems have already been studied and
+modeled as CASs \citep{chen2013cloud}. 
+
+Using the underlying characteristics of the cloud systems would
+contribute to adaptivity and environment sensitiviy.
+Most cloud systems architectures are based on queues or event systems, which
+usually form the backbone of the whole cloud architecture and are used to deliver
 information as well as activate different modules in a way that scales
-well. This feature is leveraged \citep{bottone2016implementing}, which
+well. This feature is leveraged in \citep{bottone2016implementing}, which
 implements an ant-based system using the MQTT queue management
 framework to deposit virtual pheromones, which are then {\em sniffed} by
 agents in an stigmergic algorithm. Instead of simply implementing an
@@ -223,8 +247,9 @@ cloud computing was even created.
 
 \section{Conclusions}
 
-As can be observed by the dearth of references for complex cloud
-systems or cloud-native artificial life, we are still in the early
+As can be observed by the dearth of references for complex adaptive cloud
+systems or cloud-native artificial life, as opposed to web-native
+artificial life \citep{taylor2016webal}, we are still in the early
 stages of its development, with the cloud being used mainly as a
 resource for the straightforward porting of earlier systems. Some
 steps have been taking in the realization of the complex adaptive

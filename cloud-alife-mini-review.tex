@@ -40,8 +40,6 @@ $^{2}$ CITIC, Universidad de Granada, Spain }
 \def\corrEmail{jmerelo@ugr.es}
 
 
-
-
 \begin{document}
 \onecolumn
 \firstpage{1}
@@ -207,12 +205,13 @@ behavior. We will refer to this in the next section.
 
 The possibilities of cloud architectures to exhibit some form of soft
 artificial life were explored from early on, although mainly in blogs
-and trade conferences \cite{burela09:Azure,hakimi}; this last one
+and trade conferences \citep{burela09:Azure,hakimi}; this last one
 mentions the cloud as a complex adaptive system, with most of the
 features that these systems have such as adaptivity or
-resiliency. However, since the cloud systems are in principle
+resiliency.
+However, since the cloud systems are in principle
 human-designed, that adaptivity and resiliency does not necesarily
-exist. Complex adaptive cloud systems  would make use of the underlying physical (or
+exist. Complex adaptive cloud systems would make use of the underlying physical (or
 virtual) characteristics of the cloud to implement complex
 systems, although baseline cloud systems have already been studied and
 modeled as CASs \citep{chen2013cloud}. 
@@ -243,7 +242,14 @@ connections, spawn new copies or eliminate them, all in an autonomic
 way without needing to rely on a central authority, using peer to peer
 protocols such as the {\em gossip} protocol \citep{LNCS44480129}, which has
 actually been used for evolutionary algorithms \citep{laredo09cache} before
-cloud computing was even created.
+cloud computing was even created;  Briscoe and De Wilde
+\citep{DBLP:journals/corr/abs-1101-5428,DBLP:journals/corr/abs-0712-4102}
+  talk about {\em digital ecosystems} in the context of service based
+  architectures, referring to distributed systems that evolve via
+  agents mapped to nodes. This is a pioneering approach, which could
+  form the basis of complex cloud systems. However, these approaches
+  did not have a continuation when the whole plethora of cloud
+  services started to become popular in the next years. 
 
 \section{Conclusions}
 

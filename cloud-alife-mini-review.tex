@@ -26,8 +26,8 @@
 
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
-\def\firstAuthorLast{Sample {et~al.}} %use et al only if is more than 1 author
-\def\Authors{Juan-Julián Merelo-Guervós\,$^{1,2,*}$, Co-Author\,$^{2}$ and Co-Author\,$^{1,2}$}
+\def\firstAuthorLast{JJ Merelo {et~al.}} %use et al only if is more than 1 author
+\def\Authors{Juan-Julián Merelo-Guervós\,$^{1,2,*}$, P.A. Castillo\,$^{1,2}$ and Co-Author\,$^{1,2}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{$^{1}$Departamento de Arquitectura y Tecnología de
@@ -89,7 +89,7 @@ to the field of cloud computing.
 \section{Introduction}
 
 From its start less than ten years ago, cloud computing
-\citep{armbrust2010view,qian2009cloud} has become in the last two
+\citep{qian2009cloud,armbrust2010view,Sadiku2014} has become in the last two
 years the dominant computing platform. Even if initially it was a
 metaphor applied to virtualized resources of any kind that could be
 accessed in a pay-per-use basis, it has extended itself way beyond its
@@ -143,7 +143,8 @@ is called {\em soft} artificial life looks at living systems to create
 models and algorithms in engineering applications, from optimization
 to content generation. The almost organic and decidedly complex nature
 of large-scale cloud deployments and the fact that they constitute a
-techno-social system \citep{vespignani2009predicting,JJ2016} hints at some relationship between both scientific and engineering fields; however,
+techno-social system \citep{vespignani2009predicting,JJ2016} hints at 
+some relationship between both scientific and engineering fields; however,
 for the time being that has not been the case to a large extent, to the point
 that the recent ECAL 2017 conference \citep{ecal17} only has a passing reference to cloud systems.
 
@@ -169,7 +170,10 @@ straightforward to port a parallel implementation of
 whatever algorithm to a cloud-based one; this presents some challenges and
 has in fact been addressed in several ones; for instance \citep{Medel2017}
 studies how to create models of complex systems using cloud resources,
- \citep{merelo2011evostar} presents a system that uses free cloud
+\cite{mericloud}
+% \citep{merelo2011evostar} 
+% We could change the current citation (the one that appears in the References section) by the paper by K. Meri et al  (http://dblp.uni-trier.de/rec/bibtex/journals/nc/MeriAMGCGL13) <= \cite{mericloud} in geneura.bib
+presents a system that uses free cloud
 storage services as a device for interchanging individuals in an
 evolutionary algorithm; Kopp \citep{Kopp2016} reviews technologies
 that are, in general, available for simulation, focusing on defense
@@ -206,11 +210,11 @@ the device or user consuming the service via technologies that allow them to acc
 services using peer to peer technologies, or using mesh networks or
 similar technologies to establish services that users of mainly mobile
 devices can access. Since these {\em edge} nodes kind of {\em surround} the
-user, they also receive the denomination of {\em fog} computing \citep{luan2015fog}, which is studied mainly in the context of the Internet
+user, they also receive the denomination of {\em fog} computing \citep{luan2015fog}, 
+which is studied mainly in the context of the Internet
 of Things. The devices and computing nodes constituting this {\em fog}
 are, effectively, a complex adaptive system
-\citep{yan2010application,roca2018tackling}. However, the scale and
-sheer
+\citep{yan2010application,roca2018tackling}. However, the scale and sheer
 number of devices used in fog computing exceed by orders of magnitude
 the one in actual cloud computing system for the time being, so that
 for the time being these concepts are still not being applied to
@@ -225,8 +229,7 @@ The possibilities of cloud architectures to exhibit some form of soft
 artificial life were explored from early on, although mainly in blogs
 and trade conferences \citep{burela09:Azure,hakimi}; this last one
 mentions the cloud as a complex adaptive system, with most of the
-features that these systems have such as adaptivity or
-resiliency.
+features that these systems have such as adaptivity or resiliency.
 However, since cloud systems are in principle
 human-designed, that adaptivity and resiliency does not necesarily
 exist. Complex adaptive cloud systems would make use of the underlying physical (or

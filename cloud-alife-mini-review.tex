@@ -92,28 +92,39 @@ accessed in a pay-per-use basis, it has extended itself way beyond its
 initial and simple translation of data center concepts to create
 completely new software architectures and methodologies for
 developing, testing and deploying large scale applications. Several
-concepts account from the difference of cloud computing with respect
+concepts account from the difference of cloud computing with respect 
+% account for the differences
 to other, {\em classical}, methodologies. 
 
 
 \begin{itemize}
 
 \item Infrastructure is fully automatized and described by software;
+  % Maybe we could be more specific about the Infrastructure part? 
+  % the keyword here been provisioning. To differentiate from administration 
+  % and maintenance that is also 
+  % provided in traditional full-managed servers.    
   there is no {\em hard} boundary between software and hardware, with
   hardware descriptions and applications that run on them
-  developed at the same time.  
+  developed at the same time.
+  % specified at the same time?   
+  % ... with hardware resources and hosted 
+  %  services specified at the same time. - Mario
 
 \item Applications are a loose collection of resources which interact
   asynchronously, are independent of each other, and in many cases
   have their own vendors or product owners. Some resources are
-  ephemeral, appearing when they are needed and vanishing afterwards,
-  some are permanent, but all of them behave {\em reactively}, being active when
-  they receive information, and asynchronously, never waiting for
+  % product owners -> service providers? - Mario
+  ephemeral, appearing only when they are needed and vanishing afterwards,
+  some others are persistent, but all of them behave {\em reactively}, 
+  being active when % they activate after they receive information
+  % becoming active only after they receive information - Mario
+  they receive information, and {\em asynchronously}, never waiting for a
   response to return but relying instead on promises or other
   programming language constructs to deliver results to caller. 
 
 \item  As such a loose collection, cloud-native applications might
-  become {\em organic}  with parts of them changing continously, in a
+  become {\em organic}  with parts of them changing continuously, in a
   process called {\em continuous integration}. This complex internal
   structure and evolution make them, in fact, complex systems that
   have to be analyzed and designed with that in mind. 

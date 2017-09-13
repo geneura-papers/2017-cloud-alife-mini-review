@@ -118,13 +118,9 @@ to other, {\em classical}, methodologies. % those classical methodologies should
 \item Applications are a loose collection of resources which interact
   asynchronously, are independent of each other, and in many cases
   have their own vendors or service providers. Some resources are
-  % product owners -> service providers? - Mario
-  % changed - JJ
   ephemeral, appearing only when they are needed and vanishing afterwards;
   some others are persistent, but all of them behave {\em reactively},
-  becoming active only after % they activate after they receive information
-  % becoming active only after they receive information - Mario
-  % changed - JJ
+  becoming active only after 
   they receive information, and {\em asynchronously}, never waiting for a
   response to return but relying instead on promises or other
   programming language constructs to deliver results to the caller.
@@ -172,7 +168,11 @@ has in fact been addressed in several ones; for instance \citep{Medel2017}
 studies how to create models of complex systems using cloud resources,
 \cite{mericloud}
 % \citep{merelo2011evostar} 
-% We could change the current citation (the one that appears in the References section) by the paper by K. Meri et al  (http://dblp.uni-trier.de/rec/bibtex/journals/nc/MeriAMGCGL13) <= \cite{mericloud} in geneura.bib
+% We could change the current citation (the one that appears in the
+% References section) by the paper by K. Meri et al
+% (http://dblp.uni-trier.de/rec/bibtex/journals/nc/MeriAMGCGL13) <=
+% \cite{mericloud} in geneura.bib
+% OK - JJ
 presents a system that uses free cloud
 storage services as a device for interchanging individuals in an
 evolutionary algorithm; Kopp \citep{Kopp2016} reviews technologies
@@ -205,7 +205,7 @@ service-oriented architectures.
 One of the downsides of using the cloud is the need of a permanent connection
 with possibly a high bandwidth. However, there is
 an interesting complex-systems approach to this: the so-called {\em edge
-computing} \citep{satyanarayanan2017edge} moves cloud resources {\em close} to
+computing} \citep{shi2016edge} moves cloud resources {\em close} to
 the device or user consuming the service via technologies that allow them to access other
 services using peer to peer technologies, or using mesh networks or
 similar technologies to establish services that users of mainly mobile

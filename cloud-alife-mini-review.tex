@@ -27,7 +27,8 @@
 
 \def\keyFont{\fontsize{8}{11}\helveticabold }
 \def\firstAuthorLast{JJ Merelo {et~al.}} %use et al only if is more than 1 author
-\def\Authors{Juan-Julián Merelo-Guervós\,$^{1,2,*}$, P.A. Castillo\,$^{1,2}$, Mario Garc\'ia-Valdez\,$^{3}$ and Co-Author\,$^{1,2}$}
+\def\Authors{Juan-Julián Merelo-Guervós\,$^{1,2,*}$,
+  P.A. Castillo\,$^{1,2}$ and Mario Garc\'ia-Valdez\,$^{3}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
 % If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{$^{1}$Departamento de Arquitectura y Tecnología de
@@ -67,15 +68,7 @@ all three areas; even if it taps and extends previous concepts such as
 service oriented, concurrent and distributed computing, this shift has
 to be eventually translated to the algorithmic and conceptual aspects
 of sciences such as artificial life. In this short paper we will 
-% of data-driven sciences?  because cloud is at the technological
-% level? - Mario
-% artificial life is not a science, rather a
-% discipline. Computing-intensive sciences? Alife is not data driven - JJ
 review of how the world of cloud computing has intersected the
-% In this short review we will make a review of how ..
-% we will [analyze|describe|center on|show] how the world of ..
-% seems too repetitive review .. review - Mario
-% Changed - JJ
 artificial life field, and how it has been used as an
 inspiration for new models or the design and implementation of new and powerful
 algorithms; in the other direction, we will also examine how
@@ -84,7 +77,7 @@ to the field of cloud computing.
 
 \tiny
  \keyFont{ \section{Keywords:} Artificial life, cloud computing,
-   distributed computing, complex systems. } %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
+   distributed computing, complex systems, complex adaptive systems. } %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
 \end{abstract}
 
 \section{Introduction}
@@ -214,7 +207,7 @@ devices can access. Since these {\em edge} nodes kind of {\em surround} the
 user, they also receive the denomination of {\em fog} computing \citep{luan2015fog}, 
 which is studied mainly in the context of the Internet
 of Things. The devices and computing nodes constituting this {\em fog}
-are, effectively, a complex adaptive system
+are, effectively, a complex adaptive system (CAS)
 \citep{yan2010application,roca2018tackling}. However, the scale and sheer
 number of devices used in fog computing exceed by orders of magnitude
 the one in actual cloud computing system for the time being, so that
@@ -232,7 +225,7 @@ and trade conferences \citep{burela09:Azure,hakimi}; this last one
 mentions the cloud as a complex adaptive system, with most of the
 features that these systems have such as adaptivity or resiliency.
 However, since cloud systems are in principle
-human-designed, that adaptivity and resiliency does not necesarily
+human-designed, that adaptivity and resiliency does not necessarily
 exist. Complex adaptive cloud systems would make use of the underlying physical (or
 virtual) characteristics of the cloud to implement complex
 systems, although baseline cloud systems have already been studied and

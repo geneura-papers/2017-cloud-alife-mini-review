@@ -133,7 +133,11 @@ study of this kind of complex systems looking for similarities among
 them and living systems, ecosystems or societies, in particular, what
 is called {\em soft} artificial life looks at living systems to create
 models and algorithms in engineering applications, from optimization
-to content generation. The almost organic and decidedly complex nature
+to content generation; since these algorithms are generally inspired
+by natural phenomena they are usually called {\em bio-inspired},
+although they can properly be called {\em meta-heuristics} in the
+sense that they describe a methodology for deciding which heuristics
+to apply to a particular problem. The almost organic and decidedly complex nature
 of large-scale cloud deployments and the fact that they constitute a
 techno-social system \citep{vespignani2009predicting,JJ2016} hints at 
 some relationship between both scientific and engineering fields; however,
@@ -162,14 +166,7 @@ straightforward to port a parallel implementation of
 whatever algorithm to a cloud-based one; this presents some challenges and
 has in fact been addressed in several ones; for instance \citep{Medel2017}
 studies how to create models of complex systems using cloud resources,
-\cite{mericloud}
-% \citep{merelo2011evostar} 
-% We could change the current citation (the one that appears in the
-% References section) by the paper by K. Meri et al
-% (http://dblp.uni-trier.de/rec/bibtex/journals/nc/MeriAMGCGL13) <=
-% \cite{mericloud} in geneura.bib
-% OK - JJ
-presents a system that uses free cloud
+\cite{mericloud} presents a system that uses free cloud
 storage services as a device for interchanging individuals in an
 evolutionary algorithm; Kopp \citep{Kopp2016} reviews technologies
 that are, in general, available for simulation, focusing on defense
@@ -197,9 +194,9 @@ reduction of costs, which is one of the first-order results of working
 in the cloud, but still it is only a short step away from
 service-oriented architectures.
 
-
 One of the downsides of using the cloud is the need of a permanent connection
-with possibly a high bandwidth. However, there is
+with possibly a high bandwidth, since most of the computing is done
+elsewhere and not on user-owned devices. However, there is
 an interesting complex-systems approach to this: the so-called {\em edge
 computing} \citep{shi2016edge} moves cloud resources {\em close} to
 the device or user consuming the service via technologies that allow them to access other
@@ -208,7 +205,11 @@ similar technologies to establish services that users of mainly mobile
 devices can access. Since these {\em edge} nodes kind of {\em surround} the
 user, they also receive the denomination of {\em fog} computing \citep{luan2015fog}, 
 which is studied mainly in the context of the Internet
-of Things. The devices and computing nodes constituting this {\em fog}
+of Things and refers to a computing and communication system
+architecture that relies on devices that do not belong either to the
+user or to the company, with an emphasis on collaborative or peer to
+peer protocols; this decentralized and user-centric architecture imply
+that the devices and computing nodes constituting this {\em fog}
 are, effectively, a complex adaptive system (CAS)
 \citep{yan2010application,roca2018tackling}. However, the scale and sheer
 number of devices used in fog computing exceed by orders of magnitude
@@ -243,7 +244,10 @@ implements an ant-based system using the MQTT queue management
 framework to deposit virtual pheromones, which are then {\em sniffed} by
 agents in an stigmergic algorithm. Instead of simply implementing an
 array in one of the virtual nodes or a database which can be read from
-any client, this is a way that translates bioinspired algorithms to
+any client, this is a way that translates bio-inspired algorithms,
+which are inspired by natural phenomena such as anthill building,
+flocking or evolution and are generally based on populations of
+individuals, to
 their closest equivalent in a virtual environment, creating cloud
 native complex adaptive systems.
 
@@ -251,7 +255,8 @@ This can be taken further; every module in a cloud system is not
 adaptive, performing whatever service it has been programmed to do via
 its description. But lately, some cloud systems are being built with
 self-* principles in mind; as services in the cloud acquire autonomy
-in what is called {\em autonomic computing}, {\em adaptation} is not far away
+in what is called {\em autonomic computing}, that is, self-managed
+computing infrastructure, {\em adaptation} is not far away
 and services become adaptive, being able to self-organize and the
 whole system to self-heal, two agencies that make a cloud system
 acquire complex adaptive behaviour, such as being able to reconfigure
